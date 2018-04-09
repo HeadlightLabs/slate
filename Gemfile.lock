@@ -5,6 +5,8 @@ GEM
     rack-contrib (2.0.1)
       rack (~> 2.0)
     rack-rewrite (1.5.1)
+    rack-ssl (1.4.1)
+      rack
 
 PLATFORMS
   ruby
@@ -13,6 +15,7 @@ DEPENDENCIES
   rack
   rack-contrib
   rack-rewrite
+  rack-ssl
 
 BUNDLED WITH
    1.16.1

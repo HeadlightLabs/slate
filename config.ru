@@ -8,4 +8,6 @@ use Rack::Rewrite do
   rewrite '/', '/index.html'
 end
 
+use Rack::SSL
+
 run Rack::Directory.new('public')
