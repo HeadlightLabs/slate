@@ -225,6 +225,9 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
           </li>
           <li>
+            <a href="#contacting-us" class="toc-h1 toc-link" data-title="contacting-us">Contacting Us</a>
+          </li>
+          <li>
             <a href="#endpoints" class="toc-h1 toc-link" data-title="endpoints">Endpoints</a>
               <ul class="toc-list-h2">
                   <li>
@@ -246,25 +249,65 @@
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Wayne Corporation API! You can use our API to access Wayne Corporation endpoints.</p>
 <h1 id='authentication'>Authentication</h1>
-<p>All endpoints have a basic authorization scheme that depends on a simple API key that&#39;s available through the URL.</p>
+<p>All endpoints have a very simple authorization scheme that depends on a simple API key that&#39;s available through the URL.</p>
 
-<p>For example, if your workspace URL is <code>/assess/abcdefg</code>, your API key would be <code>abcdefg</code>.</p>
+<p>For example, if your workspace URL is <code>/assess/gGQhTbt_O9wD2lFxRdbzPw</code>, your API key would be <code>gGQhTbt_O9wD2lFxRdbzPw</code>.</p>
+<h1 id='contacting-us'>Contacting Us</h1>
+<p>There are a few ways to contact us:</p>
+
+<p>1) Use drift (blue icon in the lower right corner)</p>
+
+<p>2) E-mail us at: team@headlightlabs.com</p>
+
+<p>We&#39;ll try to be as responsive as possible, but can&#39;t guarantee anything.</p>
+
+<p>If you get stuck, we recommend you stub out the API response using the sample responses below and moving on. </p>
+
+<p>If your submission ends up using the stubbed response as a result of an error on our part, we won&#39;t count it against you!</p>
 <h1 id='endpoints'>Endpoints</h1><h2 id='perform-a-lookup'>Perform a lookup</h2><pre class="highlight javascript tab-javascript"><code>
 <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://www.headlightlabs.com/api/gcpd_lookup"</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="s1">'multipart/form-data'</span><span class="p">)</span>
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">api_key</span> <span class="o">=</span> <span class="s2">"gGQhTbt_O9wD2lFxRdbzPw"</span><span class="p">;</span>
+
+<span class="c1">// Using form data</span>
+
+<span class="kd">var</span> <span class="nx">myFileInput</span> <span class="o">=</span> <span class="p">...;</span> <span class="c1">// TODO: Implement!</span>
+
+<span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
+<span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"api_key"</span><span class="p">,</span> <span class="nx">api_key</span><span class="p">);</span>
+<span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"image"</span><span class="p">,</span> <span class="nx">myFileInput</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+<span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">formData</span><span class="p">);</span>
+
+
+<span class="c1">// Using base64-encoded data</span>
+
+<span class="kd">var</span> <span class="nx">myBase64EncodedImageData</span> <span class="o">=</span> <span class="p">...;</span> <span class="c1">// TODO: Implement!</span>
+
+<span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
+<span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"api_key"</span><span class="p">,</span> <span class="nx">api_key</span><span class="p">);</span>
+<span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">"image_contents"</span><span class="p">,</span> <span class="nx">myBase64EncodedImageData</span><span class="p">));</span>
+
+<span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+<span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">formData</span><span class="p">);</span>
+
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample Response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
-  </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.myimagelocation.com/myimage.png"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"closest_match"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Platypus Person"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"percent_match"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"location"</span><span class="p">:</span><span class="s2">"https://headlight.s3.amazonaws.com/gGQhTbt_O9wD2lFxRdbzPw/elKtOo6L4EXKkkp2NmVXVw"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"closest_match"</span><span class="p">:</span><span class="s2">"Agitator Aligator"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"percent_match"</span><span class="p">:</span><span class="mi">53</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint accepts form data and returns information about the upload photo.</p>
+<p>This endpoint accepts either file input data or base64 image data and returns information about the upload photo.</p>
+<h3 id='sending-image-data'>Sending image data</h3>
+<p>You can either send image data up as multipart/form-data or as a base64-encoded string.</p>
+
+<p>If you&#39;d like to send up file input data, use the <code>image</code> key. If you&#39;d like to send up the image as a base64-encoded string, use the <code>image_contents</code> key.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://www.headlightlabs.com/api/gcpd_lookup</code></p>
 <h3 id='post-parameters'>POST Parameters</h3>
@@ -284,9 +327,15 @@
 </tr>
 <tr>
 <td>image</td>
-<td>true</td>
-<td>multipart-formdata</td>
+<td>true (if <code>image_contents</code> isn&#39;t provided)</td>
+<td>multipart/form-data</td>
 <td>The image data you want to analyze</td>
+</tr>
+<tr>
+<td>image_contents</td>
+<td>true (if <code>image</code> isn&#39;t provided)</td>
+<td>String</td>
+<td>The image data, encoded as a base64 string, you want to analyze</td>
 </tr>
 </tbody></table>
 <h2 id='user-report'>User Report</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://www.headlightlabs.com/api/gcpd_report"</span><span class="p">;</span>
@@ -295,7 +344,7 @@
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>The above command returns the same JSON response every time:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thank you for your report!"</span><span class="w">
@@ -321,9 +370,15 @@
 </tr>
 <tr>
 <td>image</td>
-<td>true</td>
-<td>multipart-formdata</td>
-<td>The image data to report</td>
+<td>true (if <code>image_contents</code> isn&#39;t provided)</td>
+<td>multipart/form-data</td>
+<td>The image data you want to report</td>
+</tr>
+<tr>
+<td>image_contents</td>
+<td>true (if <code>image</code> isn&#39;t provided)</td>
+<td>String</td>
+<td>The image data, encoded as a base64 string, you want to report</td>
 </tr>
 </tbody></table>
 
