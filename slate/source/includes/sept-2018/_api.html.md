@@ -20,6 +20,10 @@ Or you can [download the simulation server and run it yourself here](https://git
   you will need to re-register in order to continue.
 </aside>
 
+<aside class="warning">
+  Please limit your requests to once every 100ms (10 a second). We understand that accidents happen, but please don't bring down the simulation servers.  We reserve the right to rate-limit if you exceed that, but we would prefer not to!
+</aside>
+
 ## Making a request
 
 > Sample HTTP POST request implementation
