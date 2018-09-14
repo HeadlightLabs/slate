@@ -202,7 +202,8 @@ sendPOSTRequest("/scan", data, cb);
       "X": 55,
       "Y": 55
     },
-    "Value": 30
+    "Value": 30,
+    "Claimed": false
   }],
   "Error" false,
   "ErrorMsg": ""
@@ -276,7 +277,8 @@ sendPOSTRequest("/claim", data, cb);
       "X": 55,
       "Y": 55
     },
-    "Value": 30
+    "Value": 30,
+    "Claimed": true,
   }],
   "Error" false,
   "ErrorMsg": ""
@@ -347,7 +349,8 @@ sendPOSTRequest("/release", data, cb);
       "X": 55,
       "Y": 55
     },
-    "Value": 0
+    "Value": 0,
+    "Claimed": false
   }],
   "Error" false,
   "ErrorMsg": ""
@@ -418,7 +421,8 @@ sendPOSTRequest("/mine", data, cb);
       "X": 55,
       "Y": 55
     },
-    "Value": 29
+    "Value": 29,
+    "Claimed": true
   }],
   "Error" false,
   "ErrorMsg": ""

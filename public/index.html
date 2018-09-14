@@ -439,7 +439,9 @@ service to test your mining algorithm.</p>
     </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="p">,</span><span class="w">
       </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">node's</span><span class="w"> </span><span class="err">value</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="err">bool</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Whether</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">node</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">claimed</span><span class="w"> </span><span class="err">already</span><span class="w">
   </span><span class="p">}],</span><span class="w">
   </span><span class="s2">"Error"</span><span class="p">:</span><span class="w"> </span><span class="err">bool</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="err">string</span><span class="w">
@@ -628,7 +630,8 @@ service to test your mining algorithm.</p>
       </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
       </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
   </span><span class="p">}],</span><span class="w">
   </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
@@ -692,7 +695,8 @@ service to test your mining algorithm.</p>
       </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
       </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="p">}],</span><span class="w">
   </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
@@ -753,7 +757,8 @@ service to test your mining algorithm.</p>
       </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
       </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
   </span><span class="p">}],</span><span class="w">
   </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
@@ -819,7 +824,8 @@ service to test your mining algorithm.</p>
       </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
       </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}],</span><span class="w">
   </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">

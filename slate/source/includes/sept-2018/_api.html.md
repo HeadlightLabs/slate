@@ -127,7 +127,9 @@ That'll look different for different languages, but generally it should look lik
     "Location": {
       "X": int,
       "Y": int
-    }
+    },
+    "Value": int, // The node's value
+    "Claimed": bool // Whether the node is claimed already
   }],
   "Error": bool,
   "ErrorMsg": string
