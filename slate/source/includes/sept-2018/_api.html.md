@@ -13,7 +13,7 @@ You can connect to our shared simulation server here (just pick one):
 * headlight-tournament-4.herokuapp.com
 * headlight-tournament-5.herokuapp.com
 
-Or you can [download the simulation server and run it yourself here](https://github.com/HeadlightLabs/Tournament-API).
+Or you can [download the simulation server and run it yourself here](https://github.com/HeadlightLabs/Tournament-API). Take a look at the README for instructions on how to install it.
 
 <aside class="notice">
   The shared simulation servers will reset every 15 minutes to let people have a chance on a fresh simulation. After the restart (which will only take a second),
