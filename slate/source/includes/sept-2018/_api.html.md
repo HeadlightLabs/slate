@@ -7,11 +7,13 @@ The simulation server only accepts `POST` requests with a `JSON` payload. All ot
 
 You can connect to our shared simulation server here (just pick one):
 
-* headlight-tournament-1.herokuapp.com
-* headlight-tournament-2.herokuapp.com
-* headlight-tournament-3.herokuapp.com
+* headlight-tournament-1.herokuapp.com 
+* headlight-tournament-2.herokuapp.com 
+* headlight-tournament-3.herokuapp.com 
 * headlight-tournament-4.herokuapp.com
 * headlight-tournament-5.herokuapp.com
+
+If you need to know the port for any reason, the port is 80.
 
 Or you can [download the simulation server and run it yourself here](https://github.com/HeadlightLabs/Tournament-API). Take a look at the README for instructions on how to install it.
 
