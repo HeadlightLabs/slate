@@ -55,7 +55,7 @@ function SendPOSTRequest(path, data, callback) {
     });
   });
 
-  req.write(JSON.Stringify(data));
+  req.write(JSON.stringify(data));
   req.end();
 }
 
