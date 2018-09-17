@@ -30,7 +30,7 @@ You can take the following actions with your bot. Read each endpoint for more in
 
 ## Mining
 
-* [Claim](#claim): You can put a claim on any node you're within scan range of. 
+* [Claim](#claim): You can put a claim on any node you're within scan range of. **You an have a maximum of 3 claims**
 
 * [Release](#release): You can release a claim on a node you own, to free up space for more claims.
 

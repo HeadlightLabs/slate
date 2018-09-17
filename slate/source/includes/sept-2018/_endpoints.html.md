@@ -287,6 +287,10 @@ sendPOSTRequest("/claim", data, cb);
 
 You can put a claim on any node you're within scan range of. Find nodes through the [scan](#scan) endpoint.
 
+<aside class="warning">
+  You can only claim nodes that are unclaimed by another. You can have a maximum of 3 claims.
+</aside>
+
 ### HTTP Request
 
 `POST /claim`

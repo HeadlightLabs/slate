@@ -325,7 +325,7 @@ service to test your mining algorithm.</p>
 </ul>
 <h2 id='mining'>Mining</h2>
 <ul>
-<li><p><a href="#claim">Claim</a>: You can put a claim on any node you&#39;re within scan range of. </p></li>
+<li><p><a href="#claim">Claim</a>: You can put a claim on any node you&#39;re within scan range of. <strong>You an have a maximum of 3 claims</strong></p></li>
 <li><p><a href="#release">Release</a>: You can release a claim on a node you own, to free up space for more claims.</p></li>
 <li><p><a href="#mine">Mine</a>: You can choose to mine a node you have a claim on. </p></li>
 </ul>
@@ -703,6 +703,10 @@ service to test your mining algorithm.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>You can put a claim on any node you&#39;re within scan range of. Find nodes through the <a href="#scan">scan</a> endpoint.</p>
+
+<aside class="warning">
+  You can only claim nodes that are unclaimed by another. You can have a maximum of 3 claims.
+</aside>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST /claim</code></p>
 <h3 id='parameters-4'>Parameters</h3>
