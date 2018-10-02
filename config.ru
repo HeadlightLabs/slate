@@ -6,6 +6,7 @@ use Rack::StaticCache, :urls => ['/assets', '/stylesheets', '/javascripts', '/fo
 
 use Rack::Rewrite do
   rewrite '/', '/index.html'
+  rewrite '/sept_2018', '/sept_2018.html'
 end
 
 use Rack::SSL
