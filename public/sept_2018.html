@@ -1,0 +1,952 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="sept_2018" data-languages="[&quot;json&quot;,&quot;javascript&quot;,&quot;python&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">json</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="python">python</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#actions" class="toc-h1 toc-link" data-title="actions">Actions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#registering" class="toc-h2 toc-link" data-title="registering">Registering</a>
+                  </li>
+                  <li>
+                    <a href="#exploring" class="toc-h2 toc-link" data-title="exploring">Exploring</a>
+                  </li>
+                  <li>
+                    <a href="#mining" class="toc-h2 toc-link" data-title="mining">Mining</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-information" class="toc-h1 toc-link" data-title="api-information">API Information</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#connecting-to-the-api" class="toc-h2 toc-link" data-title="connecting-to-the-api">Connecting to the API</a>
+                  </li>
+                  <li>
+                    <a href="#making-a-request" class="toc-h2 toc-link" data-title="making-a-request">Making a request</a>
+                  </li>
+                  <li>
+                    <a href="#response-format" class="toc-h2 toc-link" data-title="response-format">Response Format</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-endpoints" class="toc-h1 toc-link" data-title="api-endpoints">API Endpoints</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#register" class="toc-h2 toc-link" data-title="register">Register</a>
+                  </li>
+                  <li>
+                    <a href="#move" class="toc-h2 toc-link" data-title="move">Move</a>
+                  </li>
+                  <li>
+                    <a href="#scan" class="toc-h2 toc-link" data-title="scan">Scan</a>
+                  </li>
+                  <li>
+                    <a href="#claim" class="toc-h2 toc-link" data-title="claim">Claim</a>
+                  </li>
+                  <li>
+                    <a href="#release" class="toc-h2 toc-link" data-title="release">Release</a>
+                  </li>
+                  <li>
+                    <a href="#mine" class="toc-h2 toc-link" data-title="mine">Mine</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#troubleshooting-faqs" class="toc-h1 toc-link" data-title="troubleshooting-faqs">Troubleshooting/FAQs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#contacting-us" class="toc-h2 toc-link" data-title="contacting-us">Contacting Us</a>
+                  </li>
+                  <li>
+                    <a href="#general-faqs" class="toc-h2 toc-link" data-title="general-faqs">General FAQs</a>
+                  </li>
+                  <li>
+                    <a href="#the-tournament-server" class="toc-h2 toc-link" data-title="the-tournament-server">The Tournament Server</a>
+                  </li>
+                  <li>
+                    <a href="#the-api" class="toc-h2 toc-link" data-title="the-api">The API</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Mars Mining Corporation&#39;s simulated Central Mining Service (CMS). You can use our simulated
+service to test your mining algorithm.</p>
+
+<p>You&#39;ll connect to the simulation server through regular HTTP POST requests.</p>
+
+<p>If you run into trouble, see the <a href="#troubleshooting-faqs">Troubleshooting</a> section for some FAQs and info on how to get in touch with us.</p>
+
+<p>Good luck!</p>
+<h1 id='actions'>Actions</h1>
+<p>You can take the following actions with your bot. Read each endpoint for more information.</p>
+<h2 id='registering'>Registering</h2>
+<ul>
+<li><a href="#register">Register</a>:  This registers you and gives you a starting location.</li>
+</ul>
+
+<aside class="warning">
+  Always call register first! Nothing else will work until you register.
+</aside>
+<h2 id='exploring'>Exploring</h2>
+<ul>
+<li><p><a href="#move">Move</a>: You can move 1 square per <code>move</code> call.</p></li>
+<li><p><a href="#scan">Scan</a>: This will return information about any nodes in a 5x5 radius around you</p></li>
+</ul>
+<h2 id='mining'>Mining</h2>
+<ul>
+<li><p><a href="#claim">Claim</a>: You can put a claim on any node you&#39;re within scan range of. <strong>You an have a maximum of 3 claims</strong></p></li>
+<li><p><a href="#release">Release</a>: You can release a claim on a node you own, to free up space for more claims.</p></li>
+<li><p><a href="#mine">Mine</a>: You can choose to mine a node you have a claim on. </p></li>
+</ul>
+<h1 id='api-information'>API Information</h1><h2 id='connecting-to-the-api'>Connecting to the API</h2>
+<p>The simulation server only accepts <code>POST</code> requests with a <code>JSON</code> payload. All other HTTP methods and data payloads will fail. See below for examples on how to send request to the API.</p>
+
+<p>You can connect to our shared simulation server here (just pick one):</p>
+
+<ul>
+<li>headlight-tournament-1.herokuapp.com </li>
+<li>headlight-tournament-2.herokuapp.com </li>
+<li>headlight-tournament-3.herokuapp.com </li>
+<li>headlight-tournament-4.herokuapp.com</li>
+<li>headlight-tournament-5.herokuapp.com</li>
+</ul>
+
+<p>If you need to know the port for any reason, the port is 80.</p>
+
+<p>Or you can <a href="https://github.com/HeadlightLabs/Tournament-API">download the simulation server and run it yourself here</a>. Take a look at the README for instructions on how to install it.</p>
+
+<aside class="notice">
+  The shared simulation servers will reset every 15 minutes to let people have a chance on a fresh simulation. After the restart (which will only take a second),
+  you will need to re-register in order to continue.
+</aside>
+
+<aside class="warning">
+  Please limit your requests to once every 100ms (10 a second). We understand that accidents happen, but please don't bring down the simulation servers.  We reserve the right to rate-limit if you exceed that, but we would prefer not to!
+</aside>
+<h2 id='making-a-request'>Making a request</h2>
+<blockquote>
+<p>Sample HTTP POST request implementation</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="c1">// Sends a POST request to a specific endpoint</span>
+<span class="kd">function</span> <span class="nx">SendPOSTRequest</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">hostname</span><span class="p">:</span> <span class="s1">'localhost'</span><span class="p">,</span>
+    <span class="na">port</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">,</span>
+    <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="kd">let</span> <span class="nx">response</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="nx">req</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">response</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span> <span class="p">});</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'end'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> 
+      <span class="kd">let</span> <span class="nx">finalResponse</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">''</span><span class="p">));</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="nx">finalResponse</span><span class="p">);</span> 
+    <span class="p">});</span>
+  <span class="p">});</span>
+
+  <span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+  <span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Sample request</span>
+
+<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Here is my response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/register"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">def</span> <span class="nf">send_post_request</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="s">"""
+        Sends a POST request using the requests library to a specific endpoint.
+    """</span>
+    <span class="n">endpoint</span> <span class="o">=</span> <span class="s">"http://localhost:5000"</span> <span class="o">+</span> <span class="n">path</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">)</span>
+
+
+<span class="c"># Register the bot</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/register"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="c"># Print the response</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Here is my response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="w">  </span><span class="err">See</span><span class="w"> </span><span class="err">another</span><span class="w"> </span><span class="err">tab</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">sample</span><span class="w"> </span><span class="err">implementation.</span><span class="w">
+</span></code></pre>
+<p>You should make <code>POST</code> requests to the API server with a <code>JSON</code> payload. </p>
+
+<p>That&#39;ll look different for different languages, but generally it should look like the examples to the right.</p>
+<h2 id='response-format'>Response Format</h2>
+<blockquote>
+<p>Response Format and Types</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>  <span class="nx">See</span> <span class="nx">the</span> <span class="nx">JSON</span> <span class="nx">tab</span><span class="p">.</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">See</span> <span class="n">the</span> <span class="n">JSON</span> <span class="n">tab</span><span class="o">.</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="err">string</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="err">string</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="err">int</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">node's</span><span class="w"> </span><span class="err">value</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="err">bool</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Whether</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">node</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">claimed</span><span class="w"> </span><span class="err">already</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="p">:</span><span class="w"> </span><span class="err">bool</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="err">string</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>All responses will share the same format. See the JSON tab for more information.</p>
+<h1 id='api-endpoints'>API Endpoints</h1><h2 id='register'>Register</h2>
+<blockquote>
+<p>Registering your bot</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span> <span class="c1">// or whatever! Choose whatever you'd like</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"See the JSON tab for a sample response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/register"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">}</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/register"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+  <span class="c"># Print the response</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"See the JSON tab for a sample response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">//</span><span class="w"> </span><span class="err">Response</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Claims"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VictorEchoNovember"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint registers you with the simulation service. </p>
+
+<aside class="warning">
+  None of the other endpoints will work unless you call `/register` first! You will need to call this every time the simulation restarts.
+</aside>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /register</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callsign</td>
+<td>false</td>
+<td>String</td>
+<td>The callsign you&#39;d like to use. If you leave this blank, you&#39;ll be assigned a random callsign.</td>
+</tr>
+</tbody></table>
+<h2 id='move'>Move</h2>
+<blockquote>
+<p>Moving your bot</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span><span class="p">,</span>
+  <span class="na">x</span><span class="p">:</span> <span class="mi">51</span> <span class="o">+</span> <span class="s2">""</span><span class="p">,</span>
+  <span class="na">y</span><span class="p">:</span> <span class="mi">51</span> <span class="o">+</span> <span class="s2">""</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"See the JSON tab for a sample response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/move"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">,</span> <span class="s">'x'</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="mi">51</span><span class="p">),</span> <span class="s">'y'</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="mi">51</span><span class="p">)}</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/move"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+  <span class="c"># Print the response</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"See the JSON tab for a sample response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Claims"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VictorEchoNovember"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">51</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint will update your location with the simulation server. You can move by 1 square in any direction. For example, if your location is (50,50), all of the following are valid moves:</p>
+
+<ul>
+<li><code>(49, 49)</code></li>
+<li><code>(49, 50)</code></li>
+<li><code>(49, 51)</code></li>
+<li><code>(50, 49)</code></li>
+<li><code>(50, 50)</code> (yes, you can move nowhere)</li>
+<li><code>(50, 51)</code></li>
+<li><code>(51, 49)</code></li>
+<li><code>(51, 50)</code></li>
+<li><code>(51, 51)</code></li>
+</ul>
+
+<p>If you try to move to an invalid location (like <code>(1000,1000)</code>, or <code>(100,100)</code> in the above example), it will be ignored.</p>
+
+<aside class="notice">
+  The grid is 100x100, so you won't be able to go above `100` or below `0` in either direction.
+</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /move</code></p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callsign</td>
+<td>true</td>
+<td>String</td>
+<td>Your callsign.</td>
+</tr>
+<tr>
+<td>x</td>
+<td>true</td>
+<td>String</td>
+<td>The x-coordinate of your new location</td>
+</tr>
+<tr>
+<td>y</td>
+<td>true</td>
+<td>String</td>
+<td>The y-coordinate of your new location</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+  Notice the data types of the parameters x and y - they're strings, not integers. You also might notice that the response returns integers, even though the request only
+  accepts strings. This is intentional behavior.
+</aside>
+<h2 id='scan'>Scan</h2>
+<blockquote>
+<p>Scanning for nodes around you</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"See the JSON tab for a sample response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/scan"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">}</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/scan"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+  <span class="c"># Print the response</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"See the JSON tab for a sample response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Claims"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VictorEchoNovember"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AlphaTango"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This will return information about any nodes in a 5x5 radius around your current location. </p>
+
+<aside class="notice">
+  If there are no nodes in your scan radius, the `nodes` property in the response will be blank.
+</aside>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST /scan</code></p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callsign</td>
+<td>true</td>
+<td>String</td>
+<td>Your callsign. If you leave this blank, your request will be ignored.</td>
+</tr>
+</tbody></table>
+<h2 id='claim'>Claim</h2>
+<blockquote>
+<p>Claiming a node</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span><span class="p">,</span>
+  <span class="na">node</span><span class="p">:</span> <span class="s2">"AlphaTango"</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"See the JSON tab for a sample response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/claim"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">,</span> <span class="s">'node'</span><span class="p">:</span> <span class="s">'AlphaTango'</span><span class="p">}</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/claim"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+  <span class="c"># Print the response</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"See the JSON tab for a sample response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Claims"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"AlphaTango"</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VictorEchoNovember"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AlphaTango"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>You can put a claim on any node you&#39;re within scan range of. Find nodes through the <a href="#scan">scan</a> endpoint.</p>
+
+<aside class="warning">
+  You can only claim nodes that are unclaimed by another. You can have a maximum of 3 claims.
+</aside>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST /claim</code></p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callsign</td>
+<td>true</td>
+<td>String</td>
+<td>Your callsign.</td>
+</tr>
+</tbody></table>
+<h2 id='release'>Release</h2>
+<blockquote>
+<p>Releasing a node</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span><span class="p">,</span>
+  <span class="na">node</span><span class="p">:</span> <span class="s2">"AlphaTango"</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"See the JSON tab for a sample response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/release"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">,</span> <span class="s">'node'</span><span class="p">:</span> <span class="s">'AlphaTango'</span><span class="p">}</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/release"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+  <span class="c"># Print the response</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"See the JSON tab for a sample response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Claims"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VictorEchoNovember"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AlphaTango"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>You can release a claim on a node you own, to free up space for more claims. Typically you would do this once you have mined a node entirely.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST /release</code></p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callsign</td>
+<td>true</td>
+<td>String</td>
+<td>Your callsign.</td>
+</tr>
+<tr>
+<td>node</td>
+<td>true</td>
+<td>String</td>
+<td>The node you&#39;d like to release.</td>
+</tr>
+</tbody></table>
+<h2 id='mine'>Mine</h2>
+<blockquote>
+<p>Mining a node</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">callsign</span><span class="p">:</span> <span class="s2">"VictorEchoNovember"</span><span class="p">,</span>
+  <span class="na">node</span><span class="p">:</span> <span class="s2">"AlphaTango"</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">cb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"See the JSON tab for a sample response: "</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sendPOSTRequest</span><span class="p">(</span><span class="s2">"/mine"</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code>  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'callsign'</span><span class="p">:</span> <span class="s">'VictorEchoNovember'</span><span class="p">,</span> <span class="s">'node'</span><span class="p">:</span> <span class="s">'AlphaTango'</span><span class="p">}</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">send_post_request</span><span class="p">(</span><span class="s">"/mine"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+  <span class="c"># Print the response</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"See the JSON tab for a sample response: "</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Claims"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"AlphaTango"</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VictorEchoNovember"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AlphaTango"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"X"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Y"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Value"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Claimed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="s2">"Error"</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ErrorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>You can choose to mine a node you have a claim on. This will increase your resource score by 1, and also decrease the value of the node by 1.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST /mine</code></p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callsign</td>
+<td>true</td>
+<td>String</td>
+<td>Your callsign.</td>
+</tr>
+<tr>
+<td>node</td>
+<td>true</td>
+<td>String</td>
+<td>The node you&#39;d like to mine.</td>
+</tr>
+</tbody></table>
+<h1 id='troubleshooting-faqs'>Troubleshooting/FAQs</h1><h2 id='contacting-us'>Contacting Us</h2>
+<p>There are a few ways to contact us:</p>
+
+<ol>
+<li>Use Drift (blue icon in the lower right corner of Headlightlabs.com)</li>
+<li>E-mail us at: team@headlightlabs.com</li>
+</ol>
+
+<p>We&#39;ll try to be as responsive as possible, but can&#39;t guarantee anything - we&#39;re people too! If you&#39;re doing the challenge at 4 AM EST, we&#39;re probably asleep.</p>
+
+<p>If you get stuck, we recommend you stub out the API response using a sample response and moving on. </p>
+
+<p>If your submission ends up using the stubbed response as a result of an error on our part, we won&#39;t count it against you! We&#39;ll give you an opportunity to submit a patch for the final event.</p>
+<h2 id='general-faqs'>General FAQs</h2><h3 id='why-did-you-only-provide-a-sample-implementation-in-javascript-python-and-not-insert-language-here'>Why did you only provide a sample implementation in JavaScript/Python and not (insert language here)?</h3>
+<p>Mostly just time. We figure that JavaScript and Python are popular enough and readable enough that most people should be able to understand what&#39;s going on even if they&#39;re not super familiar with either of those languages.</p>
+
+<p>Also note that you&#39;ll get extra points for not using the sample code as a starter point.</p>
+<h3 id='how-can-i-test-this-out-against-someone-else-it-39-s-just-me-on-the-server'>How can I test this out against someone else? It&#39;s just me on the server!</h3>
+<p>We&#39;ll always be running a bot we wrote on each server, so you&#39;ll never be totally alone on a simulation.</p>
+
+<p>You can also run multiple instances of your bot and have it compete against itself!</p>
+<h2 id='the-tournament-server'>The Tournament Server</h2><h3 id='how-do-i-connect-to-the-simulation-servers'>How do I connect to the simulation servers?</h3>
+<p>You can run it locally if you&#39;d like, or you can connect to any of the following servers we&#39;ve setup:</p>
+
+<ul>
+<li>headlight-tournament-1.herokuapp.com</li>
+<li>headlight-tournament-2.herokuapp.com</li>
+<li>headlight-tournament-3.herokuapp.com</li>
+<li>headlight-tournament-4.herokuapp.com</li>
+<li>headlight-tournament-5.herokuapp.com</li>
+</ul>
+
+<p><br /></p>
+<h3 id='the-servers-just-shut-down-randomly-what-gives'>The servers just shut down randomly! What gives?</h3>
+<p>We restart the servers every 15 minutes to give everyone a fresh start.</p>
+
+<p>Just reconnect! The restart process only takes a few seconds at most.</p>
+
+<p><br /></p>
+<h3 id='i-can-39-t-seem-to-find-any-nodes-with-any-value'>I can&#39;t seem to find any nodes with any value</h3>
+<p>You might just be on a populated server. Try a different server, or try running it locally.</p>
+
+<p><br /></p>
+<h3 id='how-do-i-run-it-install-it-locally'>How do I run it/install it locally?</h3>
+<p>It&#39;s a Go program, so you can run it by cloning the server repo somewhere along your gopath.</p>
+
+<p>You can also just run the following command and it should appear in the right place:
+<code>go get github.com/Headlightlabs/Tournament-API</code></p>
+
+<p>and then go to the directory:
+<code>cd $GOPATH/github.com/Headlightlabs/Tournament-API</code></p>
+
+<p>and run it: 
+<code>./run.sh</code></p>
+
+<p>If you don&#39;t have Go installed, <a href="https://golang.org/dl/">follow the instructions here</a>.</p>
+
+<p><strong>However, if you didn&#39;t install Go before you started the challenge I would highly recommend just using our test servers. You&#39;ll spend precious time getting it setup!</strong></p>
+
+<p><br /></p>
+<h3 id='it-just-crashes-when-i-start-it-up-locally'>It just crashes when I start it up locally</h3>
+<p>Take a look at the <code>run.sh</code> script to make sure those steps are all succeeding. If that&#39;s still not working, get in contact with us.</p>
+
+<p><br /></p>
+<h2 id='the-api'>The API</h2><h3 id='none-of-the-commands-work-i-keep-getting-an-error-about-an-unregistered-bot'>None of the commands work, I keep getting an error about an unregistered bot</h3>
+<p>You didn&#39;t register your bot. See the <a href="#register">Registration</a> command above.</p>
+
+<p><br /></p>
+<h3 id='i-tried-to-claim-a-node-but-it-didn-39-t-work'>I tried to claim a node but it didn&#39;t work!</h3>
+<p>Someone else probably claimed that node! You&#39;ll get a message in the response under the <code>ErrorMsg</code> key that says something like <code>already_claimed_node</code>. </p>
+
+<p>You can try again later to see if it&#39;s been released.</p>
+
+<p><br /></p>
+<h3 id='the-move-endpoint-isn-39-t-working-i-keep-getting-an-error-that-says-something-like-quot-error-msg-json-invalid-use-of-string-quot'>The Move endpoint isn&#39;t working! I keep getting an error that says something like &quot;Error msg: json: invalid use of ,string...&quot;</h3>
+<p>The Move endpoint takes coordinates as strings, <em>not</em> integers. This is intentional (doesn&#39;t every API have some funny business like this?). Convert your coordinates to strings, like the sample code!</p>
+
+<p><br /></p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">json</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="python">python</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
