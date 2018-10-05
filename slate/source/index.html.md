@@ -12,8 +12,8 @@ toc_footers:
 search: true
 
 includes:
-  - sept-2018/intro
-  - sept-2018/api
-  - sept-2018/endpoints
-  - sept-2018/troubleshooting
+  - oct-2018/intro
+  - oct-2018/api
+  - oct-2018/endpoints
+  - oct-2018/troubleshooting
 ---
