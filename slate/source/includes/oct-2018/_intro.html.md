@@ -14,6 +14,9 @@ Good luck!
 
 Your task is to make a small web application that displays the location of bots and mining nodes on a grid.
 
+You’ll be creating a client side app that uses our API. We’ve set up CORS so you’ll be able to make ajax requests directly from the browser. 
+All your heroku app will need to do is load your html and javascript, though if you'd like to add a server on top of that you're more than welcome to.
+
 Bots can move and mine nodes, so you'll have to keep making requests to keep up to date!
 
 # Basic Information
