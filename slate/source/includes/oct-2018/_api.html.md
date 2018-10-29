@@ -33,8 +33,8 @@ If you need to know the port for any reason, the port is 80.
 
 ```javascript
 
-// Sends a POST request to a specific endpoint
-function SendGETRequest(path, data, callback) {
+// Sends a GET request to a specific endpoint
+function sendGETRequest(path, data, callback) {
 
   const options = {
     hostname: 'https://headlight-tournament-3.herokuapp.com',
@@ -95,3 +95,8 @@ print("Here are all the bots: " + r.text)
 You should make `GET` requests to the API server. You'll receive a `JSON` response.
 
 That'll look different for different languages, but generally it should look like the examples to the right.
+
+
+## What about CORS?
+
+Don't worry! We've set everything up properly, so you'll be able to make cross-domain requests without having to do anything special.
