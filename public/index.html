@@ -339,15 +339,15 @@ on the bot&#39;s algorithm.</p></li>
 
 <p>If you need to know the port for any reason, the port is 80.</p>
 
-<aside class="notice">
-  The shared simulation servers will reset every 15 minutes. Resets will only take a second.
+<aside class="warning">
+  The shared simulation servers will reset every 15 minutes. Resets will only take a second. This means bots and nodes will appear to jump suddenly every 15 minutes. 
 
-  This means bots and nodes will appear to jump suddenly every 15 minutes!
+  Your application should handle this gracefully!
 </aside>
 
 <aside class="warning">
-  Please limit your requests to once every 100ms. Nothing will change any more frequently than that.
-  We understand that accidents happen, but please don't bring down our servers.  
+  Please limit your requests to once a second. Nothing will change any more frequently than that.
+
   We reserve the right to rate-limit if you exceed that, but we would prefer not to!
 </aside>
 <h2 id='making-a-request'>Making a request</h2>
