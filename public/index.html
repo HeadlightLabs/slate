@@ -297,11 +297,11 @@ service to test your implementation.</p>
 <p>Your task is to make a small web application that displays the location of bots and mining nodes on a grid.</p>
 
 <p>You’ll be creating a client side app that uses our API. We’ve set up CORS so you’ll be able to make ajax requests directly from the browser. 
-All your heroku app will need to do is load your html and javascript, though if you&#39;d like to add a server on top of that you&#39;re more than welcome to.</p>
+All your heroku app will need to do is load your html and javascript, though if you&#39;d like to add a server on top of that you&#39;re more than welcome to (and we&#39;ll give extra points for doing so).</p>
 
 <p>Bots can move and mine nodes, so you&#39;ll have to keep making requests to keep up to date!</p>
 <h1 id='basic-information'>Basic Information</h1>
-<p>The simuliation server simulates bots and mining nodes on a 100x100 grid. </p>
+<p>The simulation server simulates bots and mining nodes on a 20x20 grid. </p>
 <h2 id='about-bots'>About bots</h2>
 <aside class="notice">
   You don't need to know this information in order to complete the application successfully - this is just for your own knowledge.
@@ -309,7 +309,7 @@ All your heroku app will need to do is load your html and javascript, though if 
 
 <ul>
 <li><p>Bots are allowed to move around within the confines of the grid, 1 square at a time. </p></li>
-<li><p>Bots can scan a 5x5 radius around them to find out more information about nodes.</p></li>
+<li><p>Bots can scan a 3x3 radius around them to find out more information about nodes.</p></li>
 <li><p>Bots can claim up to 3 nodes at a time, and can only mine 1 node at a time.</p></li>
 <li><p>Simulated bots start off at a random location, and move around the map in pre-determined ways. They may or may not actually mine nodes, depending
 on the bot&#39;s algorithm.</p></li>
@@ -330,11 +330,11 @@ on the bot&#39;s algorithm.</p></li>
 <p>You can connect to one of our shared simulation status servers here (just pick one):</p>
 
 <ul>
-<li>headlight-tournament-1.herokuapp.com </li>
-<li>headlight-tournament-2.herokuapp.com </li>
-<li>headlight-tournament-3.herokuapp.com </li>
-<li>headlight-tournament-4.herokuapp.com</li>
-<li>headlight-tournament-5.herokuapp.com</li>
+<li>headlight-tournament-1.herokuapp.com (bots move randomly)</li>
+<li>headlight-tournament-2.herokuapp.com (bots move in a square pattern)</li>
+<li>headlight-tournament-3.herokuapp.com (bots move randomly and mine minerals)</li>
+<li>headlight-tournament-4.herokuapp.com (bots move randomly and mine minerals)</li>
+<li>headlight-tournament-5.herokuapp.com (bots move randomly and mine minerals)</li>
 </ul>
 
 <p>If you need to know the port for any reason, the port is 80.</p>

@@ -7,11 +7,11 @@ The status server only accepts `GET` requests. See below for examples on how to 
 
 You can connect to one of our shared simulation status servers here (just pick one):
 
-* headlight-tournament-1.herokuapp.com 
-* headlight-tournament-2.herokuapp.com 
-* headlight-tournament-3.herokuapp.com 
-* headlight-tournament-4.herokuapp.com
-* headlight-tournament-5.herokuapp.com
+* headlight-tournament-1.herokuapp.com (bots move randomly)
+* headlight-tournament-2.herokuapp.com (bots move in a square pattern)
+* headlight-tournament-3.herokuapp.com (bots move randomly and mine minerals)
+* headlight-tournament-4.herokuapp.com (bots move randomly and mine minerals)
+* headlight-tournament-5.herokuapp.com (bots move randomly and mine minerals)
 
 If you need to know the port for any reason, the port is 80.
 

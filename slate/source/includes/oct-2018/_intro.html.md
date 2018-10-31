@@ -15,13 +15,13 @@ Good luck!
 Your task is to make a small web application that displays the location of bots and mining nodes on a grid.
 
 You’ll be creating a client side app that uses our API. We’ve set up CORS so you’ll be able to make ajax requests directly from the browser. 
-All your heroku app will need to do is load your html and javascript, though if you'd like to add a server on top of that you're more than welcome to.
+All your heroku app will need to do is load your html and javascript, though if you'd like to add a server on top of that you're more than welcome to (and we'll give extra points for doing so).
 
 Bots can move and mine nodes, so you'll have to keep making requests to keep up to date!
 
 # Basic Information
 
-The simuliation server simulates bots and mining nodes on a 100x100 grid. 
+The simulation server simulates bots and mining nodes on a 20x20 grid. 
 
 ## About bots
 
@@ -31,7 +31,7 @@ The simuliation server simulates bots and mining nodes on a 100x100 grid.
 
 * Bots are allowed to move around within the confines of the grid, 1 square at a time. 
 
-* Bots can scan a 5x5 radius around them to find out more information about nodes.
+* Bots can scan a 3x3 radius around them to find out more information about nodes.
 
 * Bots can claim up to 3 nodes at a time, and can only mine 1 node at a time.
 
