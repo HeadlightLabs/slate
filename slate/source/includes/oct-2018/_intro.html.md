@@ -49,3 +49,7 @@ on the bot's algorithm.
 * As they're mined, that mineral count decreases.
 
 * When a mining node hits 0 mineral count it continues to exist as a mining node with 0 minerals.
+
+<aside class="notice">
+  Multiple nodes can exist at the same location! You can choose to handle this situation or not - we won't count it against you if you don't.
+</aside>
