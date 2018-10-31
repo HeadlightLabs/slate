@@ -33,7 +33,7 @@ The simulation server simulates bots and mining nodes on a 20x20 grid.
 
 * Bots can scan a 3x3 radius around them to find out more information about nodes.
 
-* Bots can claim up to 3 nodes at a time, and can only mine 1 node at a time.
+* Bots can claim up to 3 nodes at a time, and can only mine 1 node at a time. Bots can only claim and mine nodes they're in scan range of.
 
 * Simulated bots start off at a random location, and move around the map in pre-determined ways. They may or may not actually mine nodes, depending
 on the bot's algorithm.
