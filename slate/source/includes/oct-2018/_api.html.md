@@ -18,7 +18,7 @@ If you need to know the port for any reason, the port is 80.
 <aside class="warning">
   The shared simulation servers will reset every 15 minutes. Resets will only take a second. This means bots and nodes will appear to jump suddenly every 15 minutes. 
 
-  Your application should handle this gracefully!
+  Your application should handle the server going down very briefly every 15 minutes!
 </aside>
 
 <aside class="warning">
